@@ -122,7 +122,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
 SENTRY_ACCESS_TOKEN = config('SENTRY_ACCESS_TOKEN')
 SENTRY_CLIENT_KEY = config('SENTRY_CLIENT_KEY')
+
+
+STATIC_ROOT = '/static'
+MEDIA_ROOT = '/media'
+
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
