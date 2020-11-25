@@ -27,7 +27,6 @@ services:
         ./manage.py migrate;
         ./manage.py compilemessages;
         ./manage.py collectstatic --noinput;
-        ./manage.py init_guard;
         gunicorn --bind=0.0.0.0:8000 --timeout=90 --workers=10 --preload sentry_telegram.wsgi:application;
       "
     volumes:
