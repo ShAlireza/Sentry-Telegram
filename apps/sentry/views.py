@@ -17,7 +17,6 @@ class WebhookAPIView(GenericAPIView):
 
     def post(self, request):
         data = request.data
-
-        Data.objects.create(data=data)
+        Data.objects.create(data=data, json=data)
 
         return Response(status=status.HTTP_200_OK)
